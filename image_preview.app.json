@@ -1,0 +1,71 @@
+{
+    "info": {
+        "name": "preview_image_preview",
+        "version": "1.0.0",
+        "category": "preview",
+        "keywords": ["preview"],
+        "homepage": "https://answer.bogonets.com/",
+        "bugs": "https://answer.bogonets.com/",
+        "license": "Bogonet License",
+        "author": "wooruang",
+        "engines": ">=1.0.2",
+        "environment": {},
+        "titles": {
+            "en": "Image Preview",
+            "ko": "이미지 뷰어"
+        },
+        "descriptions": {
+            "en": "Get a image.",
+            "ko": "이미지를 받아온다."
+        },
+        "documentation_mime": "text",
+        "documentations": {},
+        "meta": {
+            "components": {
+                "body": [
+                    {
+                        "name": "viewImage",
+                        "props": {},
+                        "ref": "image",
+                        "style": ""
+                    }
+                ],
+                "top": [
+                    {
+                        "align": "left",
+                        "name": "signal-button",
+                        "props": {
+                            "icon": "image",
+                            "color": "blue",
+                            "name": "signal",
+                            "signal": {
+                                "input_queries": [],
+                                "name": "~${OWN}.preview",
+                                "output_queries": [
+                                    "${OWN}.preview?mime=image/jpeg"
+                                ]
+                            },
+                            "small": false
+                        },
+                        "ref": "signalButton",
+                        "style": "",
+                        "transData": "image.setSource"
+                    }
+                ]
+            },
+            "gui": {
+                "name": "viewer"
+            }
+        }
+    },
+    "controls": {
+        "input": {
+            "list": [
+                {
+                    "name": "preview",
+                    "mimes": "image/jpeg"
+                }
+            ]
+        }
+    }
+}
