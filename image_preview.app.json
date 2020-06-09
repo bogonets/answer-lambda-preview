@@ -9,7 +9,10 @@
         "license": "Bogonet License",
         "author": "wooruang",
         "engines": ">=1.0.2",
-        "environment": {},
+        "environment": {
+            "type": "pyenv",
+            "name": "cv2"
+        },
         "titles": {
             "en": "Image Preview",
             "ko": "이미지 뷰어"
